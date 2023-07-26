@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fosil_navigation"
+    app:startDestination="@id/fosilDetailFragment">
+
+    <fragment
+        android:id="@+id/fosilDetailFragment"
+        android:name="com.juan.ec3_fosil.view.fragments.FosilDetailFragment"
+        android:label="fragment_fosil_detail"
+        tools:layout="@layout/fragment_fosil_detail" />
+    <fragment
+        android:id="@+id/fosilFavoriteFragment"
+        android:name="com.juan.ec3_fosil.view.fragments.FosilFavoriteFragment"
+        android:label="fragment_fosil_favorite"
+        tools:layout="@layout/fragment_fosil_favorite" >
+        <action
+            android:id="@+id/action_fosilFavoriteFragment_to_fosilDetailFragment"
+            app:destination="@id/fosilDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/fosilListFragment"
+        android:name="com.juan.ec3_fosil.view.fragments.FosilListFragment"
+        android:label="fragment_fosil_list"
+        tools:layout="@layout/fragment_fosil_list" >
+        <action
+            android:id="@+id/action_fosilListFragment_to_fosilDetailFragment"
+            app:destination="@id/fosilDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/infoFragment"
+        android:name="com.juan.ec3_fosil.view.fragments.InfoFragment"
+        android:label="fragment_info"
+        tools:layout="@layout/fragment_info" >
+        <action
+            android:id="@+id/action_infoFragment_to_fosilDetailFragment"
+            app:destination="@id/fosilDetailFragment" />
+    </fragment>
+</navigation>
